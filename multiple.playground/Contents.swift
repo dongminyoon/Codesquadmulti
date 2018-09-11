@@ -11,25 +11,23 @@ for i in 1..<10{
     print(gugudan)
 }
 
-
 // 서브루틴을 사용한 방법
-
-func gugu(number : Int){
-
+func gugu(number : Int) -> [Int]{
     var gugudan3 : [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]  // 구구단 곱셈을 위한 배열
     
     for i in 1..<10{
         gugudan3[i-1] = gugudan3[i-1] * number
     }
-    
-    printgugudan(result : gugudan3, dan : number)
+    return gugudan3
 }
 
-func printgugudan(result : [Int], dan : Int){
-    print(dan ,result)
+func printgugudan(gugudan : [Int], dan : Int){
+    print(dan ,gugudan)
 }
 
 for i in 1..<10{
-    gugu(number: i)
+    printgugudan(gugudan: gugu(number: i), dan : i)
 }
+
+
 
