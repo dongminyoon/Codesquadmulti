@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 import UIKit
 
+// 서브루틴 사용하지 않은 방법
 var gugudan = [Int].init(repeating: 0, count: 9)
 
 for i in 1..<10{
@@ -21,11 +22,11 @@ func gugu(number : Int){
         gugudan3[i-1] = gugudan3[i-1] * number
     }
     
-    printgugudan(number: gugudan3)
+    printgugudan(result : gugudan3, dan : number)
 }
 
-func printgugudan(number : [Int]){
-    print(number)
+func printgugudan(result : [Int], dan : Int){
+    print(dan ,result)
 }
 
 for i in 1..<10{
